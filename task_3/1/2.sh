@@ -18,5 +18,7 @@ docker run --name level1 \
 
 # Go inside level1 (nginx)
 docker exec -it level1
+
+# Write something to shared folder
 echo "Hello" > /share/hello.txt
 

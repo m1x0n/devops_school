@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-school-deployment
+  labels:
+    app: devops-school
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-school
+  template:
+    metadata:
+      labels:
+        app: devops-school
+    spec:
+      containers:
+        - name: devops-school
+          image: katacoda/docker-http-server:latest
+          ports:
+            - containerPort: 80
