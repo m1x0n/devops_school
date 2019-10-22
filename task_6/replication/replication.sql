@@ -1,0 +1,3 @@
+CHANGE MASTER TO MASTER_HOST = 'master1', MASTER_USER = 'replicator', MASTER_PASSWORD = 'password', MASTER_LOG_FILE = 'mysql-bin.000003', MASTER_LOG_POS = 154;
+
+CHANGE MASTER TO MASTER_HOST = 'master2', MASTER_USER = 'replicator', MASTER_PASSWORD = 'password', MASTER_LOG_FILE = 'mysql-bin.000003', MASTER_LOG_POS = 154;
