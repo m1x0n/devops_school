@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  databank:
+    image: mysql:5.7.28
+    container_name: databank
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - ./create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+      - ./stats.csv:/var/lib/mysql-files/stats.csv
+      - ./data:/var/lib/mysql
